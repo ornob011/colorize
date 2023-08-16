@@ -1,6 +1,49 @@
-# A simple Flask API to colorize images
+# Flask Image Processing API
 
-## Instructions:
+This API allows users to upload images, processes them using a pre-trained model, and provides a URL to access the processed image.
+
+## API Endpoints
+
+### 1. Upload and Process Image
+
+- **URL**: `/`
+- **Method**: `POST`
+- **Description**: Upload an image for processing. Returns a unique URL to retrieve the processed image.
+- **Payload**:
+  - `file`: The image file you want to upload.
+- **Success Response**:
+  - **Code**: `200`
+  - **Content**:
+    ```json
+    {
+        "message": "Image processed successfully.",
+        "image_url": "/get_image/1"
+    }
+    ```
+
+### 2. Retrieve Processed Image
+
+- **URL**: `/get_image/<int:image_id>`
+- **Method**: `GET`
+- **Description**: Fetch the processed image using its unique ID.
+- **Parameters**:
+  - `image_id`: The unique ID assigned to the processed image.
+- **Success Response**:
+  - **Code**: `200`
+  - **Content**: Processed image file.
+  
+- **Error Response**:
+  - **Code**: `404`
+  - **Content**:
+    ```json
+    {
+        "error": "Image not found."
+    }
+    ```
+
+## Setup & Execution
+
+### Installation
 
 1. Clone the repo
     ```
