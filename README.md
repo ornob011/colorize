@@ -17,13 +17,13 @@ This API allows users to upload images, processes them using a pre-trained model
     ```json
     {
         "message": "Image processed successfully.",
-        "image_url": "/get_image/1"
+        "image_url": "/image/1"
     }
     ```
 
 ### 2. Retrieve Processed Image
 
-- **URL**: `/get_image/<int:image_id>`
+- **URL**: `/image/<int:image_id>`
 - **Method**: `GET`
 - **Description**: Fetch the processed image using its unique ID.
 - **Parameters**:
