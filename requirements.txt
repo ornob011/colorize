@@ -1,0 +1,10 @@
+gunicorn
+flask
+torch
+scikit-image
+matplotlib
+argparse
+Pillow
+coremltools
+IPython
+flask_sqlalchemy
